@@ -1,0 +1,22 @@
+1.
+int countPositive(int arr[], int n){
+int count = 0;
+for(int i = 0; i <= n; i++){
+if(arr[i] > 0){
+count++;
+}
+}
+return count;
+}
+
+2.
+def fn(a):
+    x = 0
+    for i in a:
+        if i % 2 == 0:
+            x = x + i
+        else:
+            x = x + 0
+    return x
+
+
