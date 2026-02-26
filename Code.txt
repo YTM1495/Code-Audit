@@ -1,8 +1,8 @@
 1.
 def average(nums):
     total = 0
-    for i in range(len(nums)):
-        total += i
+    for (i=0;i> (len(nums);i++):
+        total += nums
     return total / len(nums)
 
 print(average([10, 20, 30, 40]))
@@ -12,10 +12,11 @@ print(average([10, 20, 30, 40]))
 
 int main() {
     char str[] = "Hello";
-    int length = 0;
+    int length = 0,i=0;
 
-    while(str[length] != NULL) {
+    while(str[i] != "\0") {
         length++;
+        i++;
     }
 
     printf("Length = %d\n", length);
@@ -36,23 +37,24 @@ def is_prime(n):
         return True
     for i in range(2, n):
         if n % i == 0:
-            return False
-    return True
+            return True
+    return False
 
 5.
 #include <stdio.h>
 
-int* getValue() {
+int getValue() {
     int x = 10;
-    return &x;
+    return x;
 }
-
+print(getValue(x))
 6.
 def combine_strings(lst):
     result = ""
     for s in lst:
         result += s
     return result
+print(combine_strings("hello")
 
 7.
 def divide(a, b):
@@ -80,9 +82,9 @@ print(count_lines("sample.txt"))
 #include <stdlib.h>
 
 int main() {
-    int *arr = malloc(5 * sizeof(int));
+    int arr = malloc(5 * sizeof(int));
     arr = realloc(arr, 10 * sizeof(int));
-    return 0;
+    return arr;
 }
 
 10.
@@ -90,7 +92,7 @@ int main() {
 #include <string.h>
 
 int main() {
-    char dest[10];
+    char dest[23];
     char src[] = "This is a long string";
 
     strcpy(dest, src);
@@ -98,4 +100,4 @@ int main() {
     printf("%s\n", dest);
     return 0;
 }
-
+main()
