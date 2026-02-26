@@ -1,20 +1,20 @@
 1.
 def average(nums):
     total = 0
-    for i in range(len(nums)):
+    for i in nums:
         total += i
-    return total / len(nums)
+    return total/len(nums)
 
 print(average([10, 20, 30, 40]))
 
 2. 
 #include <stdio.h>
+#include <string.h>
 
-int main() {
+int main(){
     char str[] = "Hello";
     int length = 0;
-
-    while(str[length] != NULL) {
+    while(str[length]!='\0') {
         length++;
     }
 
@@ -33,8 +33,8 @@ def remove_duplicates(lst):
 4.
 def is_prime(n):
     if n < 2:
-        return True
-    for i in range(2, n):
+        return False
+    for i in range(2,n):
         if n % i == 0:
             return False
     return True
@@ -42,9 +42,9 @@ def is_prime(n):
 5.
 #include <stdio.h>
 
-int* getValue() {
+int getValue() {
     int x = 10;
-    return &x;
+    return x;
 }
 
 6.
@@ -70,8 +70,8 @@ def count_lines(filename):
     lines = f.readlines()
     count = 0
     for line in lines:
-        if line != "":
-            count += 1
+        if line!= "":
+            count+= 1
     return count
 
 print(count_lines("sample.txt"))
@@ -90,12 +90,12 @@ int main() {
 #include <string.h>
 
 int main() {
-    char dest[10];
+    char dest[100];
     char src[] = "This is a long string";
 
     strcpy(dest, src);
 
-    printf("%s\n", dest);
+    printf("%s\n",dest);
     return 0;
 }
 
