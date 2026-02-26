@@ -1,0 +1,113 @@
+1.  def average(nums):
+    	if nums == 0:
+        	return 0
+    	else:
+        	return sum(nums) / len(nums)
+    print(average([10, 20, 30, 40]))
+
+2. 
+#include <stdio.h>
+int main() {
+    char str[] = "Hello";
+    int length = 0;
+
+    while(str[length] != '\0') {  
+        length++;
+    }
+
+    printf("Length = %d\n", length);
+
+    return 0;
+}
+
+3.
+def remove_duplicates(lst):
+    result = list(set(lst))
+    return result
+
+4.
+def is_prime(n):
+    if n < 2:
+        return False
+    
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    
+    return True
+
+5.
+
+#include <stdio.h>
+int* getValue() {
+    static int x = 10;   
+    return &x;
+}
+
+6.
+def combine_strings(lst):
+    s = "".join(lst)
+    return s
+
+7.
+def divide(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        result = 0
+    return result
+
+print(divide(10, 0))
+
+8.
+def count_lines(filename):
+    count = 0
+    
+    with open(filename, "r") as f:
+        for line in f:
+            if line.strip() != "":
+                count += 1
+    
+    return count
+
+print(count_lines("sample.txt"))
+
+
+9.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+    int *arr = malloc(5 * sizeof(int));
+    if (arr == NULL) {
+        return 1;
+    }
+
+    int *temp = realloc(arr, 10 * sizeof(int));
+    if (temp == NULL) {
+        free(arr);   
+        return 1;
+    }
+
+    arr = temp;
+
+    free(arr);
+    return 0;
+}
+
+10.
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char dest[10];
+    char src[] = "This is a long string";
+
+    strncpy(dest, src, sizeof(dest) - 1);
+    dest[sizeof(dest) - 1] = '\0';   
+
+    printf("%s\n", dest);
+    return 0;
+}
