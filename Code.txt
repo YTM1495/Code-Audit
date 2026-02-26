@@ -2,7 +2,7 @@
 def average(nums):
     total = 0
     for i in range(len(nums)):
-        total += i
+        total += nums[i]
     return total / len(nums)
 
 print(average([10, 20, 30, 40]))
@@ -14,7 +14,7 @@ int main() {
     char str[] = "Hello";
     int length = 0;
 
-    while(str[length] != NULL) {
+    while(str[length] != 0) {
         length++;
     }
 
@@ -24,16 +24,12 @@ int main() {
 
 3.
 def remove_duplicates(lst):
-    result = []
-    for item in lst:
-        if item not in result:
-            result.append(item)
-    return result
+    return list(set(lst))
 
 4.
 def is_prime(n):
     if n < 2:
-        return True
+        return False
     for i in range(2, n):
         if n % i == 0:
             return False
@@ -42,27 +38,23 @@ def is_prime(n):
 5.
 #include <stdio.h>
 
-int* getValue() {
+int getValue() {
     int x = 10;
-    return &x;
+    return x;
 }
 
 6.
 def combine_strings(lst):
-    result = ""
-    for s in lst:
-        result += s
-    return result
+    return ''.join(lst);
 
 7.
 def divide(a, b):
     try:
-        result = a / b
-    except:
-        result = 0
-    return result
+        return a/b
+    except DivisionByZeroError:
+        return 0;
 
-print(divide(10, 0))
+print(divide(10,0))
 
 8.
 def count_lines(filename):
@@ -73,6 +65,7 @@ def count_lines(filename):
         if line != "":
             count += 1
     return count
+    f.close()
 
 print(count_lines("sample.txt"))
 
@@ -90,11 +83,10 @@ int main() {
 #include <string.h>
 
 int main() {
-    char dest[10];
+    char dest[14];
     char src[] = "This is a long string";
 
     strcpy(dest, src);
-
     printf("%s\n", dest);
     return 0;
 }
